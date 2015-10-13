@@ -29,7 +29,6 @@ function run_docker() {
 
 export APP_NAME="{{ cookiecutter.repo_name }}"
 CMD=$1
-shift
 
 if [[ "$CMD" == "--test" || "$CMD" == "-t" ]]
 then
