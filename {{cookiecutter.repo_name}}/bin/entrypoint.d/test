@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+# Activate an virtualenv
+# cd /app; . "/app/${APP_NAME}/env/bin/activate"
+
+export APP_ENV=test
+
+echo "Running tests"
+
+# You can set environment variables that are needed here.
+# DJANGO_SETTINGS_MODULE=mymodule.config
+
+# This is a good place to run db migrations if needed.
+# manage syncdb --noinput
+# manage migrate --noinput
+
+# Run tests
+# /app/${APP_NAME}/env/bin/python /app/setup.py test
+
+
+echo "No tests configured!"; exit 1  # REMOVE THIS LINE AFTER SETUP

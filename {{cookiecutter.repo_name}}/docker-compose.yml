@@ -1,0 +1,15 @@
+# Add any other services you need for development in here
+
+db:
+  image: mysql
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    MYSQL_DATABASE: MYAPP
+
+app:
+  build: .
+  links: &app_links
+    - db
+  volumes:
+    - .:/app
+

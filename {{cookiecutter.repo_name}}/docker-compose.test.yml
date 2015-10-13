@@ -1,0 +1,4 @@
+# Add any other services you need for running tests in here
+app:
+  build: .
+  dockerfile: Dockerfile-test
