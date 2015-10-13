@@ -11,13 +11,14 @@ You should probably replace this readme with something actually useful.
 !!Important!!
 -------------
 
-This command will need to be run once before continuing:  
+
+Instructions on how to start up your developer environment (opens a shell into the container with the current directory mounted):  
 ```
-TODO
+./vkdocker.sh
 ```
 
+or  
 
-Instructions on how to start up your developer environment:  
 ```
 docker-compose -f docker-compose.yml build
 docker-compose -f docker-compose.yml shell
@@ -29,6 +30,13 @@ Your local dev directory is now mounted in the docker container, so any code cha
 
 Did you just need to run tests? Well, that's as easy as:  
 ```
+./vkdocker.sh --test
+```
+
+or manually  
+
+```
 docker-compose -f docker-compose.test.yml build
 docker-compose -f docker-compose.test.yml test
 ```
+
