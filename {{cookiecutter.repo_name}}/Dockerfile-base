@@ -10,7 +10,6 @@ ONBUILD ADD salt /app/salt
 ONBUILD ADD states /app/states
 
 # Add python project files
-ONBUILD ADD setup.py /app/setup.py
 ONBUILD ADD image/build.sh /app/image/build.sh
 ONBUILD RUN APP_ENV=build DOCKER_BUILD=1 /app/image/build.sh
 
