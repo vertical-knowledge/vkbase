@@ -9,7 +9,13 @@ ONBUILD ADD pillar /app/pillar
 ONBUILD ADD salt /app/salt
 ONBUILD ADD states /app/states
 
-# Add python project files
+
+
+# Add image build files
+# You can easily add other scripts into the image directory to allow for caching
+# For example, if you wanted to cache the dependecies your application, you can 
+# create a new salt state (e.x. myapp.base) that downloads the dependencies, and 
+# then call that from the another script before running the highstate.
 ONBUILD ADD image/build.sh /app/image/build.sh
 ONBUILD RUN APP_ENV=build DOCKER_BUILD=1 /app/image/build.sh
 
