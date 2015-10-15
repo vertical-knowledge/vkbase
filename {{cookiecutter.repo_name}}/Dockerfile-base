@@ -9,8 +9,6 @@ ONBUILD ADD pillar /app/pillar
 ONBUILD ADD salt /app/salt
 ONBUILD ADD states /app/states
 
-
-
 # Add image build files
 # You can easily add other scripts into the image directory to allow for caching
 # For example, if you wanted to cache the dependecies your application, you can 
